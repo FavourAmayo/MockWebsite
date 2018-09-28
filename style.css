@@ -1,0 +1,233 @@
+body{
+    font-family: Arial, Helvetica, sans-serif; /*Specifies the font of the characters*/
+    font-size: 15px;
+    line-height: 1.5; /*This includes the bottom of the character that goes down the longest and some space at the top*/
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0; /*An element's padding is the space between its content and its border.*/
+    margin: 0; /*Padding creates extra space within an element, while margin creates extra space around an element*/
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container{
+    width: 80%;  /*sets the width of an element*/  /* (%) -> Defines the width in percent of the containing block*/
+    margin: auto; /*auto -> The browser calculates a margin*/
+    overflow: hidden; /*overflow specifies what should happen if content overflows an element's box*/ /*hidden -> The overflow is clipped, and the rest of the content will be invisible*/
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height: 38px; /*The height property sets the height of an element.*/
+    background: #e8491d;
+    border: 0; /*The border property is a shorthand property for:
+
+    border-width
+    border-style (required)
+    border-color */
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.dark{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Header*/
+header{
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px; /*The min-height property defines the minimum height of an element. If the content is smaller than the minimum height, the minimum height will be applied.*/
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none; /*The text-decoration property specifies the decoration added to text, and is a shorthand property for:
+
+    text-decoration-line (required)
+    text-decoration-color
+    text-decoration-style */
+    text-transform: uppercase; /*The text-transform property controls the capitalization of text.*/
+    font-size: 16px;
+}
+
+header li{
+    float: left; /*The float property specifies how an element should be positioned.*/
+    display: inline; /*The display property specifies the display behavior (the type of rendering box) of an element.*/
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left; 
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: #e8491d;
+    font-weight: bold; /*The font-weight property sets how thick or thin characters in text should be displayed.*/
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+#showcase{
+    min-height: 400px;
+    background: url('images/showcase.jpg') no-repeat 0 -400px; /*The background property is a shorthand property for:
+
+    background-color
+    background-image
+    background-position
+    background-size
+    background-repeat
+    background-origin
+    background-clip
+    background-attachment*/
+
+    /*The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.*/
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* Newsletter*/
+
+#newsletter{
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/*Boxes*/
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+/* Sidebar */
+aside#sidebar{
+    float: right; 
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+/* Main-col */
+article#main-col{
+    float: left; 
+    width: 65%;
+}
+
+/* Services */
+ul#services li{
+    list-style: none; /*The list-style-type specifies the type of list-item marker in a list.*/
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #a8491d;
+    text-align: center; 
+}
+
+/* Media Queries */
+@media(max-width: 768px){/*After this max width, these css stylings will stop happening. Used for responsiveness*/
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newsletter button, .quote button{
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+/*Build An HTML5 Website With A Responsive Layout by Traversy Media*/
+/*https://www.youtube.com/watch?v=Wm6CUkswsNw*/
